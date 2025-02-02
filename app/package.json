@@ -1,11 +1,9 @@
 {
-  "name": "pwd",
-  "module": "ls package.json",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "version": 2,
+    "builds": [
+        { "src": "api/index.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+        { "src": "/api", "dest": "/api/index.py" }
+    ]
 }
